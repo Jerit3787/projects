@@ -7,7 +7,7 @@ name: Daily Site Update
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '* * * * *'
+    - cron:  '*/15 * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
