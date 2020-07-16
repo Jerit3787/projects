@@ -1,13 +1,13 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Daily Site Update
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 0 * * *'
+    - cron:  '*/2 * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,7 +19,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout Repo
       - uses: actions/checkout@v2
+      
+      - name: Installing GitFolio & Update pages
       - uses: actions/setup-node@v1
         with:
             node-version: '12'
@@ -27,7 +30,7 @@ jobs:
       - run: npm i gitfolio -g
       - run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
       
-      - name: Add & Commit
+      - name: Add & Commit to repo
         uses: EndBug/add-and-commit@v4.2.1
         with:
           add: 'dist'
