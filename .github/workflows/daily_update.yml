@@ -29,11 +29,14 @@ jobs:
             node-version: '12'
       - run: npm i gitfolio -g
       - run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
+      - run: mv dist/config.json ..
+      - run: mv dist/index.css ..
+      - run: mv dist/index.html
     
       - name: Add & Commit to repo
         uses: EndBug/add-and-commit@v4.2.1
         with:
-          add: 'dist/.'
+          add: '/'
           author_name: Jerit3787
           author_email: danish.hakim04@gmail.com
           cwd: './'
