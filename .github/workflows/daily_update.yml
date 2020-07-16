@@ -27,7 +27,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
             node-version: '12'
-            check-latest: true
       - run: npm i gitfolio -g
       - run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
     
