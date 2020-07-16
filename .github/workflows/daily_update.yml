@@ -27,8 +27,8 @@ jobs:
         with:
             node-version: '12'
             check-latest: true
-        run: npm i gitfolio -g
-        run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
+      - run: npm i gitfolio -g
+      - run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
     
       - name: Add & Commit to repo
         uses: EndBug/add-and-commit@v4.2.1
