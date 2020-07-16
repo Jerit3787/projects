@@ -7,7 +7,7 @@ name: Daily Site Update
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/10 * * * *'
+    - cron:  '0 0 * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,20 +33,11 @@ jobs:
       
       - name: Building profile
         run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
-      
-      - name: Moving config.json
-        run: mv dist/config.json ..
-      
-      - name: Moving index.css
-        run: mv dist/index.css ..
-      
-      - name: Moving index.html
-        run: mv dist/index.html ..
-    
+
       - name: Add & Commit to repo
         uses: EndBug/add-and-commit@v4.2.1
         with:
-          add: '/'
+          add: 'dist'
           author_name: Jerit3787
           author_email: danish.hakim04@gmail.com
           cwd: './'
