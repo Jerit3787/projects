@@ -21,28 +21,26 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       
-      - name: Setuping node v12
-        uses: actions/setup-node@v1
+      - name: Setuping Node latest version
+        uses: actions/setup-node@v2.1.4
         with:
             node-version: '12'
+            check-latest: true 
       
       - name: Installing gitfolio
-        run: npm i gitfolio -g
+        run: npm install gitfolio -g
       
       - name: Building profile
         run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
 
       - name: Add & Commit to repo
-        uses: EndBug/add-and-commit@v4.2.1
+        uses: EndBug/add-and-commit@v7
         with:
-          add: 'dist'
+          add: '["*.html --force", "*.css --force", "*.json --force"]'
           author_name: Jerit3787
-          author_email: danish.hakim04@gmail.com
+          author_email: danish.hakim@danishsite.me
           cwd: './'
-          force: true
           message: 'Daily page update'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
