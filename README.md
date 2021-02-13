@@ -3,4 +3,4 @@
 
 Site for my projects! All thanks to [imfunniee](https://www.github.com/imfunniee)! 
 
-[Visit the site!](https://danishsite.theworkpc.com/projects)
+[Visit the site!](https://jerit3787.github.io/projects)
