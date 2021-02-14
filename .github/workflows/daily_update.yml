@@ -38,9 +38,10 @@ jobs:
         run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
         
       - name: Renaming sh files (temporary actions)
+        run: rn prep-files prep-files.sh
 
       - name: Preparing files for commit
-        run: sh prep-files
+        run: sh prep-files.sh
       
       - name: Add & Commit to repo
         uses: EndBug/add-and-commit@v7
