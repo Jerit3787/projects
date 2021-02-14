@@ -37,11 +37,14 @@ jobs:
       - name: Building profile
         run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
 
-      - name: Checking list of directory
+      - name: Checking directory
         run: ls
 
+      - name: Removing old files
+        run: rm index.html config.json index.css
+
       - name: Copying files to root folder
-        run: cp -a -i dist/. ~/
+        run: cp -a -i dist/. ./
         
       - name: Deleting sources files
         run: rm -r dist
