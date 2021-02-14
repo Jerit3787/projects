@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo Removing old files
+rm index.html config.json index.css
+
+echo Copying files from sources
+cp -a -i dist/. ./
+
+echo Removing sources
+rm -r dist
