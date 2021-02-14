@@ -38,7 +38,7 @@ jobs:
         run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
 
       - name: Copying files to root folder
-        run: cp -a /dist/. ~/
+        run: cp -a dist/. ~/
         
       - name: Deleting sources files
         run: rm -r dist
