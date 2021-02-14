@@ -37,6 +37,9 @@ jobs:
       - name: Building profile
         run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
 
+      - name: Checking list of directory
+        run: ls
+
       - name: Copying files to root folder
         run: cp -a -i dist/. ~/
         
