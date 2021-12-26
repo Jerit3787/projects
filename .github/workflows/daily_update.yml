@@ -50,5 +50,5 @@ jobs:
           author_name: Jerit3787
           author_email: danish.hakim@danishplace.tech
           cwd: './'
-          message: 'Daily page update'
+          message: 'CI: Daily page update'
         
