@@ -52,9 +52,9 @@ jobs:
         with:
           add: '["*.html --force", "*.css --force"]'
           cwd: './'
-          message: ${{ steps.date.output.date }}
+          message: ${{ steps.date.outputs.date }}
           branch: gh-pages
           branch_mode: create
           default_author: github_actions
-          tag: ${{ steps.date.output.date }}
+          tag: ${{ steps.date.outputs.date }}
         
