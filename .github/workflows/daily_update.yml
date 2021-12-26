@@ -48,7 +48,7 @@ jobs:
         with:
           add: '["*.html --force", "*.css --force", "*.json --force"]'
           author_name: Jerit3787
-          author_email: danish.hakim@danishsite.me
+          author_email: danish.hakim@danishplace.tech
           cwd: './'
           message: 'Daily page update'
         
