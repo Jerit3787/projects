@@ -23,10 +23,10 @@ jobs:
     steps:
 
        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-       - name: Checkout Repo
-         uses: actions/checkout@v2.4.0
-         with:
-             ref: 'gh-pages'
+      - name: Checkout Repo
+        uses: actions/checkout@v2.4.0
+        with:
+            ref: 'gh-pages'
       
       - name: Setuping Node latest version
         uses: actions/setup-node@v2.5.0
