@@ -33,12 +33,9 @@ jobs:
       
       - name: Building profile
         run: gitfolio build Jerit3787 --theme dark --twitter Jerit3787
-        
-      - name: Preparing scripts
-        run: mv prep-files prep-files.sh
 
       - name: Preparing files for commit
-        run: sh prep-files.sh
+        run: cp -a -i dist/. ./
 
       - name: Preparing commit title
         id: date
