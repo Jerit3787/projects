@@ -61,7 +61,7 @@ jobs:
         run: echo "::set-output name=date::$(date +'%Y%m%d')"
       
       - name: Add & Commit to repo
-        uses: EndBug/add-and-commit@v9.1.3
+        uses: EndBug/add-and-commit@v9.1.4
         with:
           add: '["*.html --force", "*.css --force"]'
           cwd: './'
