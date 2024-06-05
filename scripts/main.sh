@@ -1,6 +1,6 @@
 #!/bin/bash
 
-fileName=("index.html", "index.css")
+fileName=("index.html" "index.css")
 
 echo "Installing gitfolio"
 
