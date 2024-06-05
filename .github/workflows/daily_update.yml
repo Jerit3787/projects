@@ -39,11 +39,14 @@ jobs:
         with:
             node-version: '12'
             check-latest: true 
-      
-      - name: Running update script
-        run: chmod +x ./scripts/main.sh && ./scripts/main.sh
 
-      - name: Preparing commit title
+      - name: Download update script
+        run: sudo wget -q -P ./scripts https://raw.githubusercontent.com/Jerit3787/projects/master/scripts/main.sh
+      
+      - name: Run update script
+        run: sudo chmod +x ./scripts/main.sh && sudo ./scripts/main.sh
+
+      - name: Prepare commit title
         id: date
         run: echo "::set-output name=date::$(date +'%Y%m%d')"
       
