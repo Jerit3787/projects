@@ -28,7 +28,7 @@ for i in ${!fileName[@]}; do
         echo -e "File content is identical. No file replacement needed \n\n"
     else
         echo "File content for ${fileName[$i]} is not identical. Replacing file."
-        cp ./dist/${fileName[$i]} ./${fileName[$i]}
+        cp ./dist/${fileName[$i]} ../${fileName[$i]}
         if [ $? -ne 0 ]; then
             # The command failed, print an error message 
             echo "The file replacement failed with exit status $?" 
