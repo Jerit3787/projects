@@ -4,7 +4,7 @@ fileName=("index.html" "index.css")
 
 echo "Cloning latest gitfolio fork"
 
-git clone https://www.github.com/Jerit3787/gitfolio.git
+git clone https://github.com/Jerit3787/gitfolio.git
 
 cd gitfolio
 
