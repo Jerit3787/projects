@@ -2,15 +2,21 @@
 
 fileName=("index.html" "index.css")
 
+echo "Cloning latest gitfolio fork"
+
+git clone https://www.github.com/Jerit3787/gitfolio.git
+
+cd gitfolio
+
 echo "Installing gitfolio"
 
-npm install gitfolio -g
+npm i
 
 echo "Successfully installed gitfolio"
 
 echo "Building gitfolio profile"
 
-gitfolio build Jerit3787 --theme dark --twitter Jerit3787
+npx gitfolio build Jerit3787 --theme dark --twitter Jerit3787
 
 echo "Successfully built gitfolio profile"
 
@@ -18,7 +24,7 @@ echo "Checking existing files"
 
 for i in ${!fileName[@]}; do
     echo "Comparing file content for ${fileName[$i]}"
-    if cmp --silent "./dist/${fileName[$i]}" "./${fileName[$i]}"; then
+    if cmp --silent "./dist/${fileName[$i]}" "../${fileName[$i]}"; then
         echo -e "File content is identical. No file replacement needed \n\n"
     else
         echo "File content for ${fileName[$i]} is not identical. Replacing file."
@@ -35,6 +41,8 @@ for i in ${!fileName[@]}; do
     fi
 done
 
-rm -r dist
+cd ..
+
+rm -r gitfolio
 
 echo "Gitfolio profile successfully updated!"
