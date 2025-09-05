@@ -16,7 +16,7 @@ echo "Successfully installed gitfolio"
 
 echo "Building gitfolio profile"
 
-npx gitfolio build Jerit3787 --theme dark --twitter Jerit3787
+npx gitfolio build Jerit3787 --theme dark --twitter Jerit3787 --linkedin Jerit3787 --fork
 
 echo "Successfully built gitfolio profile"
 
