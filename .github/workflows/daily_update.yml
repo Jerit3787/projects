@@ -35,7 +35,7 @@ jobs:
             ref: 'gh-pages'
       
       - name: Setuping Node latest version
-        uses: actions/setup-node@v5.0.0
+        uses: actions/setup-node@v6.2.0
         with:
             node-version: 'lts/*'
             check-latest: true 
