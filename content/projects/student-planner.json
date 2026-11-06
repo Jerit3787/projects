@@ -36,8 +36,5 @@
       "kind": "docs"
     }
   ],
-  "cover": "cover.jpg",
-  "gallery": [
-    "v1.jpg"
-  ]
+  "cover": "cover.jpg"
 }
