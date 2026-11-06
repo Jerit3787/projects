@@ -1,0 +1,105 @@
+---
+layout: layouts/base.njk
+pageStyles: project.css
+pagination:
+  data: projects
+  size: 1
+  alias: project
+permalink: "/projects/{{ project.slug }}/"
+eleventyComputed:
+  title: "{{ project.title }}"
+  description: "{{ project.tagline }}"
+  ogImage: "{% if project.cover %}/assets/projects/{{ project.slug }}/{{ project.cover }}{% endif %}"
+---
+{%- from "components/lozenge.njk" import lozenge -%}
+{%- from "components/tag.njk" import tag -%}
+{%- from "components/button.njk" import button -%}
+{%- set assets = "/assets/projects/" + project.slug + "/" -%}
+{%- set primary = project.links | firstIndex('kind', 'demo') -%}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="/">Projects</a><span aria-hidden="true">/</span><a href="/?category={{ project.category }}">{{ project.categoryLabel }}</a>
+</nav>
+
+<header class="project-header">
+  <div class="project-header__title">
+    <h1>{{ project.title }}</h1>
+    {{ lozenge(project.status) }}
+  </div>
+  <p class="project-header__tagline">{{ project.tagline }}</p>
+  {%- if project.links and project.links.length %}
+  <div class="btn-group">
+    {%- for l in project.links %}{{ button(l.label, l.href, 'primary' if loop.index0 == primary else 'default', l.href.startsWith('http')) }}{% endfor %}
+  </div>
+  {%- endif %}
+</header>
+
+<div class="project-layout">
+  <article class="project-main">
+    {%- if project.cover %}
+    <img class="project-cover" src="{{ assets }}{{ project.cover }}" alt="Screenshot of {{ project.title }}">
+    {%- endif %}
+
+    {%- if project.highlights and project.highlights.length %}
+    <section class="project-section">
+      <h2>Highlights</h2>
+      <ul class="highlights">
+        {%- for h in project.highlights %}<li>{{ h }}</li>{% endfor %}
+      </ul>
+    </section>
+    {%- endif %}
+
+    {%- if project.description %}
+    <section class="project-section prose">
+      <h2 class="visually-hidden">About</h2>
+      {{ project.description | md | safe }}
+    </section>
+    {%- endif %}
+
+    {%- if project.versions and project.versions.length %}
+    <section class="project-section">
+      <h2>Versions</h2>
+      <ol class="timeline">
+        {%- for v in project.versions | sort(true, false, 'date') %}
+        <li class="timeline__item">
+          <div class="timeline__head">
+            <strong>{% if v.href %}<a href="{{ v.href }}">{{ v.name }}</a>{% else %}{{ v.name }}{% endif %}</strong>
+            <time class="subtle" datetime="{{ v.date }}">{{ v.date | monthYear }}</time>
+          </div>
+          {%- if v.note %}<p class="subtle">{{ v.note }}</p>{% endif %}
+        </li>
+        {%- endfor %}
+      </ol>
+    </section>
+    {%- endif %}
+
+    {%- if project.gallery and project.gallery.length %}
+    <section class="project-section">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        {%- for g in project.gallery %}<a href="{{ assets }}{{ g }}"><img src="{{ assets }}{{ g }}" alt="{{ project.title }} screenshot {{ loop.index }}" loading="lazy"></a>{% endfor %}
+      </div>
+    </section>
+    {%- endif %}
+  </article>
+
+  <aside class="project-aside">
+    <dl class="details">
+      <div><dt>Category</dt><dd><a href="/?category={{ project.category }}">{{ project.categoryLabel }}</a></dd></div>
+      <div><dt>Started</dt><dd><time datetime="{{ project.date }}">{{ project.date | monthYear }}</time></dd></div>
+      {%- if project.tech and project.tech.length %}
+      <div><dt>Tech</dt><dd><ul class="tags">{% for t in project.tech %}<li><a href="/?tech={{ t | urlencode }}">{{ tag(t) }}</a></li>{% endfor %}</ul></dd></div>
+      {%- endif %}
+      {%- if project.tags and project.tags.length %}
+      <div><dt>Tags</dt><dd><ul class="tags">{% for t in project.tags %}<li>{{ tag(t) }}</li>{% endfor %}</ul></dd></div>
+      {%- endif %}
+      {%- if project.github %}
+      <div><dt>GitHub</dt><dd class="gh">
+        <a href="{{ project.github.url }}">{{ project.repo }}</a>
+        <span>★ {{ project.github.stars }}{% if project.github.language %} · {{ project.github.language }}{% endif %}</span>
+        <span class="subtle">Updated {{ project.github.pushedAt | ago }}</span>
+        {%- if project.github.archived %}<span class="lozenge">Archived on GitHub</span>{% endif %}
+      </dd></div>
+      {%- endif %}
+    </dl>
+  </aside>
+</div>

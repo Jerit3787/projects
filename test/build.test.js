@@ -49,3 +49,26 @@ test('each visible project appears exactly once in the category groups', async (
   assert.deepEqual(slugs, ['full', 'minimal', 'stutastic']);
   assert.match(html, /<strong>1<\/strong><span>in progress<\/span>/);
 });
+
+test('detail page lists versions newest first', async () => {
+  const html = read(await buildSite(), 'projects/stutastic/index.html');
+  const order = ['v3', 'v2', 'v1'].map((v) => html.indexOf(`>${v}<`));
+  assert.ok(order.every((i) => i > -1), 'all versions present');
+  assert.deepEqual([...order].sort((a, b) => a - b), order);
+});
+
+test('minimal detail page has no empty sections', async () => {
+  const html = read(await buildSite(), 'projects/minimal/index.html');
+  assert.doesNotMatch(html, /Highlights|Versions|<img|undefined/);
+});
+
+test('description markdown is rendered and raw HTML escaped', async () => {
+  const html = read(await buildSite(), 'projects/full/index.html');
+  assert.match(html, /<strong>bold<\/strong>/);
+  assert.match(html, /&lt;script&gt;/);
+  assert.doesNotMatch(html, /<script>alert/);
+});
+
+test('hidden projects get no page', async () => {
+  assert.ok(!existsSync(join(await buildSite(), 'projects/secret/index.html')));
+});
