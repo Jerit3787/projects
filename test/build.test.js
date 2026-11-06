@@ -72,3 +72,15 @@ test('description markdown is rendered and raw HTML escaped', async () => {
 test('hidden projects get no page', async () => {
   assert.ok(!existsSync(join(await buildSite(), 'projects/secret/index.html')));
 });
+
+test('public feed lists visible projects with absolute urls', async () => {
+  const out = await buildSite();
+  const feed = JSON.parse(read(out, 'api/projects.json'));
+  assert.equal(feed.projects.length, 3);
+  assert.equal(feed.projects[0].url, 'https://projects.danplace.tech/projects/stutastic/');
+  const full = feed.projects.find((p) => p.slug === 'full');
+  assert.equal(full.cover, 'https://projects.danplace.tech/assets/projects/full/cover.png');
+  assert.equal(feed.projects.find((p) => p.slug === 'minimal').cover, null);
+  assert.ok(!Number.isNaN(Date.parse(feed.generated)));
+  assert.ok(existsSync(join(out, '404.html')));
+});

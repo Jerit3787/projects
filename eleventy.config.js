@@ -42,7 +42,7 @@ export default function (eleventyConfig) {
 
   return {
     dir: { input: 'src', includes: '_includes', data: '_data' },
-    templateFormats: ['njk', 'md'],
+    templateFormats: ['njk', 'md', '11ty.js'],
     htmlTemplateEngine: 'njk',
   };
 }
