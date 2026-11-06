@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Status Page",
+  "tagline": "Uptime monitoring and a public status page for all of my websites.",
+  "status": "active",
+  "category": "tools",
+  "date": "2021-08",
+  "repo": "Jerit3787/status",
+  "tech": [
+    "Upptime",
+    "GitHub Actions"
+  ],
+  "tags": [
+    "monitoring"
+  ],
+  "links": [
+    {
+      "label": "Status page",
+      "href": "https://status.danplace.tech",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/status",
+      "kind": "repo"
+    }
+  ]
+}

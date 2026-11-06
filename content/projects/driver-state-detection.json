@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Driver State Detection",
+  "tagline": "Real-time, webcam-based driver attention monitoring in Python using OpenCV and a custom ResNet50 facial keypoint model.",
+  "status": "completed",
+  "category": "university",
+  "date": "2025-06",
+  "repo": "Jerit3787/Driver-State-Detection",
+  "tech": [
+    "Python",
+    "OpenCV",
+    "PyTorch"
+  ],
+  "tags": [
+    "computer vision"
+  ],
+  "highlights": [
+    "Eye aspect ratio, gaze and head-pose scoring",
+    "PERCLOS-based tiredness detection",
+    "Warnings for asleep, looking away and distracted states"
+  ],
+  "links": [
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/Driver-State-Detection",
+      "kind": "repo"
+    }
+  ]
+}

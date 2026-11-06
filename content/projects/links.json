@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Links",
+  "tagline": "All my links on one page.",
+  "status": "completed",
+  "category": "tools",
+  "date": "2021-02",
+  "repo": "Jerit3787/links",
+  "tech": [
+    "HTML5",
+    "CSS3"
+  ],
+  "links": [
+    {
+      "label": "Live demo",
+      "href": "https://links.danplace.tech",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/links",
+      "kind": "repo"
+    }
+  ]
+}

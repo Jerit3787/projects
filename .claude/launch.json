@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "showcase", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev"], "port": 8080 },
+    { "name": "showcase", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev"], "port": 8082 },
     { "name": "showcase-fixtures", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev:fixtures"], "port": 8081 }
   ]
 }

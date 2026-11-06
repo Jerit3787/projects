@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Kasutto Prototype",
+  "tagline": "A footwear e-commerce site. Final project for Web Technologies (INFO 2302).",
+  "status": "completed",
+  "category": "university",
+  "date": "2024-12",
+  "repo": "Jerit3787/kasutto",
+  "tech": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Materialize"
+  ],
+  "tags": [
+    "e-commerce"
+  ],
+  "highlights": [
+    "Product catalogue with filtering",
+    "Shopping cart",
+    "Responsive interface"
+  ],
+  "links": [
+    {
+      "label": "Live demo",
+      "href": "https://jerit3787.github.io/kasutto",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/kasutto",
+      "kind": "repo"
+    }
+  ],
+  "cover": "cover.jpg"
+}

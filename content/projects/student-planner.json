@@ -1,0 +1,40 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Student Planner",
+  "tagline": "A planner PWA for students: tasks, courses and reminders in one place.",
+  "status": "active",
+  "category": "tools",
+  "date": "2021-03",
+  "featured": true,
+  "order": 2,
+  "tech": [
+    "JavaScript",
+    "Firebase",
+    "Tauri",
+    "Cloudflare Workers"
+  ],
+  "tags": [
+    "pwa",
+    "productivity"
+  ],
+  "highlights": [
+    "Task scheduling and reminders",
+    "Course organisation",
+    "Calendar integration",
+    "Push reminders from a scheduled Cloudflare Worker (FCM)"
+  ],
+  "description": "Started in 2021 as a Materialize + Firebase web app and still going. The current version ships as a PWA and a desktop app, with its own [documentation site](https://github.com/Jerit3787/planner-docs).",
+  "links": [
+    {
+      "label": "Live demo",
+      "href": "https://planner.danplace.tech",
+      "kind": "demo"
+    },
+    {
+      "label": "Docs",
+      "href": "https://github.com/Jerit3787/planner-docs",
+      "kind": "docs"
+    }
+  ],
+  "cover": "cover.jpg"
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "CTF Writeups",
+  "tagline": "My CTF writeup blog: competition solutions, challenge writeups and workshop notes.",
+  "status": "active",
+  "category": "security",
+  "date": "2023-12",
+  "order": 1,
+  "repo": "Jerit3787/ctf",
+  "tech": [
+    "Jekyll",
+    "Chirpy"
+  ],
+  "tags": [
+    "ctf",
+    "writeups"
+  ],
+  "links": [
+    {
+      "label": "Read the blog",
+      "href": "https://ctf.danplace.tech",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/ctf",
+      "kind": "repo"
+    }
+  ]
+}

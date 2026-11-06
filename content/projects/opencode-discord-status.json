@@ -1,0 +1,31 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "OpenCode Discord Status",
+  "tagline": "Discord Rich Presence for OpenCode V2: project, model, tokens and cost, read locally from OpenCode's SQLite database.",
+  "status": "active",
+  "category": "tools",
+  "date": "2026-11",
+  "repo": "Jerit3787/opencode-discord-status",
+  "tech": [
+    "Go",
+    "SQLite"
+  ],
+  "tags": [
+    "discord",
+    "opencode",
+    "plugin"
+  ],
+  "highlights": [
+    "Pure-Go daemon reading OpenCode's local SQLite database (no cgo)",
+    "Shows the current project, model, token count and cost",
+    "Busy/idle detection from the latest assistant message",
+    "Can run only while OpenCode is open"
+  ],
+  "links": [
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/opencode-discord-status",
+      "kind": "repo"
+    }
+  ]
+}

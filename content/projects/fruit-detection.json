@@ -1,0 +1,22 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Apple & Tomato Detection",
+  "tagline": "Models that identify apples and tomatoes (trained on Fruits-360), with a front-end for trying them.",
+  "status": "completed",
+  "category": "university",
+  "date": "2025-04",
+  "repo": "Jerit3787/apple-and-tomato-detection",
+  "tech": [
+    "Python"
+  ],
+  "tags": [
+    "machine learning"
+  ],
+  "links": [
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/apple-and-tomato-detection",
+      "kind": "repo"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "BPN Checker",
+  "tagline": "A simple tool to check the requirements for Bantuan Prihatin Nasional (BPN).",
+  "status": "archived",
+  "category": "tools",
+  "date": "2020-05",
+  "repo": "Jerit3787/bpn",
+  "tech": [
+    "Java",
+    "Swing",
+    "Material Design"
+  ],
+  "highlights": [
+    "Java Swing application",
+    "Custom Material-style UI",
+    "Data processing modules"
+  ],
+  "links": [
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/bpn",
+      "kind": "repo"
+    }
+  ],
+  "cover": "cover.jpg"
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "BlackBox AI Prototype",
+  "tagline": "A redesigned BlackBox AI chat interface. Final project for Human Computer Interaction (INFO 3307).",
+  "status": "completed",
+  "category": "university",
+  "date": "2025-06",
+  "repo": "Jerit3787/BlackBoxAI-Project",
+  "tech": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Materialize"
+  ],
+  "tags": [
+    "HCI"
+  ],
+  "highlights": [
+    "Responsive chat management",
+    "Personalised AI responses",
+    "Material Design interface"
+  ],
+  "links": [
+    {
+      "label": "Live demo",
+      "href": "https://jerit3787.github.io/BlackBoxAI-Project",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/BlackBoxAI-Project",
+      "kind": "repo"
+    }
+  ],
+  "cover": "cover.jpg"
+}

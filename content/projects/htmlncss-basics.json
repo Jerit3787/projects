@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "HTML & CSS Basics",
+  "tagline": "My first steps with HTML and CSS: a simple static page.",
+  "status": "completed",
+  "category": "early",
+  "date": "2020-05",
+  "tech": [
+    "HTML",
+    "CSS"
+  ],
+  "links": [
+    {
+      "label": "Live demo",
+      "href": "/htmlncss-basics/index.html",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/projects/tree/master/legacy/htmlncss-basics",
+      "kind": "repo"
+    }
+  ],
+  "cover": "cover.jpg"
+}

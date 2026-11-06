@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "PageLinks",
+  "tagline": "My personal links website, the first version of what became links.danplace.tech.",
+  "status": "completed",
+  "category": "early",
+  "date": "2021-01",
+  "tech": [
+    "HTML",
+    "CSS"
+  ],
+  "links": [
+    {
+      "label": "Live demo",
+      "href": "/pagelinks/index.html",
+      "kind": "demo"
+    },
+    {
+      "label": "Current version",
+      "href": "/projects/links/",
+      "kind": "other"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/projects/tree/master/legacy/pagelinks",
+      "kind": "repo"
+    }
+  ]
+}

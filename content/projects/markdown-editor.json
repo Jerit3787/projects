@@ -1,0 +1,43 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Markdown Editor",
+  "tagline": "A fast markdown editor with live preview, multiple documents, and real-time multi-user collaboration (Yjs + Cloudflare Durable Objects).",
+  "status": "active",
+  "category": "tools",
+  "date": "2026-08",
+  "featured": true,
+  "order": 3,
+  "repo": "Jerit3787/markdown-editor",
+  "tech": [
+    "TypeScript",
+    "CodeMirror",
+    "Yjs",
+    "Cloudflare Workers",
+    "Durable Objects"
+  ],
+  "tags": [
+    "editor",
+    "markdown",
+    "collaboration"
+  ],
+  "highlights": [
+    "Live split-pane preview with a CodeMirror 6 editor, toolbar and Vim/Emacs modes",
+    "Command palette and /-triggered slash commands",
+    "[[Wikilinks]] between documents with autocomplete and backlinks",
+    "Named workspaces with automatic version history",
+    "Real-time multi-user editing with a suggestion mode",
+    "Threaded, resolvable comments anchored to text"
+  ],
+  "links": [
+    {
+      "label": "Live demo",
+      "href": "https://editor.danplace.tech",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/markdown-editor",
+      "kind": "repo"
+    }
+  ]
+}

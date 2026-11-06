@@ -1,0 +1,63 @@
+{
+  "title": "Danish Hakim — Projects",
+  "intro": "A collection of my work and projects: web apps and tools, security and CTF, university assignments, and the early experiments where it all started.",
+  "url": "https://projects.danplace.tech",
+  "author": {
+    "name": "Danish Hakim",
+    "avatar": "https://github.com/Jerit3787.png",
+    "links": [
+      {
+        "label": "Portfolio",
+        "href": "https://www.danplace.tech"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/Jerit3787"
+      },
+      {
+        "label": "CTF writeups",
+        "href": "https://ctf.danplace.tech"
+      }
+    ]
+  },
+  "nav": [
+    {
+      "label": "Projects",
+      "href": "/"
+    },
+    {
+      "label": "Portfolio",
+      "href": "https://www.danplace.tech"
+    },
+    {
+      "label": "CTF",
+      "href": "https://ctf.danplace.tech"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/Jerit3787"
+    }
+  ],
+  "categories": [
+    {
+      "id": "tools",
+      "label": "Web apps & tools",
+      "description": "Things I build and run, from collaborative editors to the scripts behind danplace.tech."
+    },
+    {
+      "id": "security",
+      "label": "Security & CTF",
+      "description": "Writeups, workshops and challenges from my CTF journey."
+    },
+    {
+      "id": "university",
+      "label": "University projects",
+      "description": "Final projects and coursework from my Computer Science degree at IIUM."
+    },
+    {
+      "id": "early",
+      "label": "Early projects (2020–21)",
+      "description": "Where it started. The original demos still run at their old URLs."
+    }
+  ]
+}

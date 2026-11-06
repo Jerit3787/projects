@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Result Generator",
+  "tagline": "A fake exam result generator.",
+  "status": "completed",
+  "category": "early",
+  "date": "2021-02",
+  "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "links": [
+    {
+      "label": "Live demo",
+      "href": "/straightspm/index.html",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/projects/tree/master/legacy/straightspm",
+      "kind": "repo"
+    }
+  ]
+}

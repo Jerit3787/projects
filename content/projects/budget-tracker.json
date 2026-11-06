@@ -1,0 +1,22 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Budget Tracker",
+  "tagline": "A desktop budget tracker. Final project for Object Oriented Programming (CSCI 1301).",
+  "status": "completed",
+  "category": "university",
+  "date": "2024-06",
+  "repo": "Jerit3787/BudgetTrackerGUIApp",
+  "tech": [
+    "Java"
+  ],
+  "tags": [
+    "OOP"
+  ],
+  "links": [
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/BudgetTrackerGUIApp",
+      "kind": "repo"
+    }
+  ]
+}

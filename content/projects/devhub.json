@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "DevHub",
+  "tagline": "Local developer operations workbench with a browser UI, MCP server, knowledge base, tests, issues, playbooks and reusable Codex skills.",
+  "status": "active",
+  "category": "tools",
+  "date": "2026-09",
+  "hidden": true,
+  "tech": [
+    "TypeScript",
+    "MCP"
+  ]
+}

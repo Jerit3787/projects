@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "AI Discord Bot",
+  "tagline": "AI reply bot for Discord with an OpenAI-compatible endpoint and a one-line setup.",
+  "status": "active",
+  "category": "tools",
+  "date": "2026-10",
+  "hidden": true,
+  "tech": [
+    "Python"
+  ]
+}

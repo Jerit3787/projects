@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "IIUM Venue Booking System",
+  "tagline": "A venue booking system. Final project for System Analysis and Design (INFO 2304).",
+  "status": "completed",
+  "category": "university",
+  "date": "2025-01",
+  "repo": "Jerit3787/IIUMVenueBookingSystem",
+  "tech": [
+    "HTML5"
+  ],
+  "links": [
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/IIUMVenueBookingSystem",
+      "kind": "repo"
+    }
+  ]
+}

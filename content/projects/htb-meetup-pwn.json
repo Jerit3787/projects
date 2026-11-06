@@ -1,0 +1,31 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "HTB Meetup: Intro to Pwn",
+  "tagline": "Binary exploitation (pwn) workshop materials for an HTB Meetup.",
+  "status": "completed",
+  "category": "security",
+  "date": "2025-12",
+  "repo": "Jerit3787/htb-meetup-pwn",
+  "tech": [
+    "C",
+    "Python",
+    "pwntools",
+    "Docker"
+  ],
+  "tags": [
+    "pwn",
+    "workshop"
+  ],
+  "highlights": [
+    "Hands-on buffer overflow challenges: redirect execution to a win() function",
+    "Mini-CTF: find and exploit an overflow to call a hidden get_flag()",
+    "Docker Compose setup for the mini-CTF"
+  ],
+  "links": [
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/htb-meetup-pwn",
+      "kind": "repo"
+    }
+  ]
+}

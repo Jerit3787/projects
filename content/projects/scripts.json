@@ -1,0 +1,27 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Scripts",
+  "tagline": "One-liner installers and setup scripts for danplace.tech projects.",
+  "status": "active",
+  "category": "tools",
+  "date": "2026-10",
+  "repo": "Jerit3787/scripts",
+  "tech": [
+    "Shell"
+  ],
+  "tags": [
+    "devops"
+  ],
+  "links": [
+    {
+      "label": "Website",
+      "href": "https://scripts.danplace.tech",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/scripts",
+      "kind": "repo"
+    }
+  ]
+}

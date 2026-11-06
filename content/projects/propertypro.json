@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "PropertyPro Prototype",
+  "tagline": "A real estate platform for property discovery. Final project for Introduction to Software Engineering (CSCI 1305).",
+  "status": "completed",
+  "category": "university",
+  "date": "2024-05",
+  "repo": "Jerit3787/propertypro",
+  "tech": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Materialize"
+  ],
+  "tags": [
+    "software engineering"
+  ],
+  "highlights": [
+    "Property search and filtering",
+    "Interactive property listings",
+    "Responsive design"
+  ],
+  "links": [
+    {
+      "label": "Live demo",
+      "href": "https://jerit3787.github.io/propertypro",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/propertypro",
+      "kind": "repo"
+    }
+  ],
+  "cover": "cover.jpg"
+}

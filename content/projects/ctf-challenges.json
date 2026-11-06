@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "CTF Challenges",
+  "tagline": "CTF challenges I've authored.",
+  "status": "active",
+  "category": "security",
+  "date": "2026-09",
+  "hidden": true,
+  "tech": [
+    "Python"
+  ]
+}

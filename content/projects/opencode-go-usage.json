@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "OpenCode Go Usage",
+  "tagline": "Claude-style OpenCode Go usage viewer for OpenCode Desktop.",
+  "status": "active",
+  "category": "tools",
+  "date": "2026-11",
+  "repo": "Jerit3787/opencode-go-usage",
+  "tech": [
+    "TypeScript",
+    "Electron"
+  ],
+  "tags": [
+    "opencode",
+    "plugin"
+  ],
+  "highlights": [
+    "Per-model monthly spend breakdown",
+    "Compares calculated usage with the server's meter",
+    "Credentials stay in the main process; no telemetry"
+  ],
+  "links": [
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/opencode-go-usage",
+      "kind": "repo"
+    }
+  ]
+}

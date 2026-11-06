@@ -1,0 +1,42 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "MathsQuiz",
+  "tagline": "A simple, free quiz website for learning maths. Only the UI was built before the project was cancelled.",
+  "status": "cancelled",
+  "category": "early",
+  "date": "2021-08",
+  "tech": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "MDL"
+  ],
+  "links": [
+    {
+      "label": "Main UI (dark)",
+      "href": "/mathsquiz/mainui/v1/index.html",
+      "kind": "demo"
+    },
+    {
+      "label": "Main UI (light)",
+      "href": "/mathsquiz/mainui/v1/index%20-%20light.html",
+      "kind": "demo"
+    },
+    {
+      "label": "Main UI v2",
+      "href": "/mathsquiz/mainui/v2/index.html",
+      "kind": "demo"
+    },
+    {
+      "label": "Login UI",
+      "href": "/mathsquiz/login/v1/index.html",
+      "kind": "demo"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/Jerit3787/projects/tree/master/legacy/mathsquiz",
+      "kind": "repo"
+    }
+  ],
+  "cover": "cover.jpg"
+}

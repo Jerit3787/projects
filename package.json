@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve --port=8080",
+    "dev": "eleventy --serve --port=8082",
     "test": "node --test test/*.test.js",
     "new": "node scripts/new-project.js",
     "dev:fixtures": "SHOWCASE_CONTENT=test/fixtures/content GITHUB_SKIP=1 eleventy --serve --port=8081"

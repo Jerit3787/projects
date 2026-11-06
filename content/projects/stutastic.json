@@ -1,0 +1,62 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "Project Stutastic",
+  "tagline": "Helps school management handle incoming parcels and lets students check their parcel information.",
+  "status": "active",
+  "category": "tools",
+  "date": "2021-02",
+  "featured": true,
+  "order": 1,
+  "tech": [
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "Firebase",
+    "Materialize"
+  ],
+  "tags": [
+    "school",
+    "firebase"
+  ],
+  "highlights": [
+    "Student data management",
+    "Statistical analysis",
+    "Real-time data updates"
+  ],
+  "description": "Built with Ali Imran. It has gone through four major versions since 2021, from a Material Design Lite prototype to the current v4 in development. The full changelog is on the [releases page](https://github.com/Jerit3787/stutastic/releases).",
+  "links": [
+    {
+      "label": "Live demo",
+      "href": "https://stutastic.danplace.tech",
+      "kind": "demo"
+    }
+  ],
+  "cover": "cover.jpg",
+  "gallery": [
+    "v2.jpg",
+    "v1.jpg"
+  ],
+  "versions": [
+    {
+      "name": "v1",
+      "date": "2021-02",
+      "note": "Initial version: basic student data management, simple statistics, Firebase database (MDL)."
+    },
+    {
+      "name": "v2",
+      "date": "2023-07",
+      "note": "Enhanced Material Design UI, better data organisation and performance work."
+    },
+    {
+      "name": "v3",
+      "date": "2024-03",
+      "note": "Student statistics with analytical features."
+    },
+    {
+      "name": "v4",
+      "date": "2026-07",
+      "note": "In development.",
+      "href": "https://stutastic.danplace.tech"
+    }
+  ]
+}

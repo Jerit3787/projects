@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "title": "API Server",
+  "tagline": "Source code for my APIs.",
+  "status": "active",
+  "category": "tools",
+  "date": "2022-07",
+  "hidden": true,
+  "tech": [
+    "JavaScript"
+  ]
+}
