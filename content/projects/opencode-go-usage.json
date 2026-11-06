@@ -26,5 +26,8 @@
       "kind": "repo"
     }
   ],
-  "cover": "cover.jpg"
+  "cover": "cover.jpg",
+  "gallery": [
+    "popup.jpg"
+  ]
 }
