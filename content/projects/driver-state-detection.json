@@ -8,8 +8,7 @@
   "repo": "Jerit3787/Driver-State-Detection",
   "tech": [
     "Python",
-    "OpenCV",
-    "PyTorch"
+    "OpenCV"
   ],
   "tags": [
     "computer vision"
