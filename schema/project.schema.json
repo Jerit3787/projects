@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://projects.danplace.tech/schema/project.schema.json",
+  "title": "Showcase project",
+  "description": "One project on projects.danplace.tech. The filename (without .json) is the URL slug.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "tagline", "status", "category", "date"],
+  "$defs": {
+    "month": { "type": "string", "pattern": "^\\d{4}-(0[1-9]|1[0-2])$", "description": "Year and month, e.g. 2024-06" },
+    "stringList": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+  },
+  "properties": {
+    "$schema": { "type": "string" },
+    "title": { "type": "string", "minLength": 1, "maxLength": 60 },
+    "tagline": { "type": "string", "minLength": 1, "maxLength": 140, "description": "One-liner shown on the card" },
+    "description": { "type": "string", "description": "Markdown body for the detail page (raw HTML is escaped)" },
+    "status": { "enum": ["active", "completed", "paused", "archived", "cancelled"] },
+    "category": { "type": "string", "description": "Must match a category id in content/site.json" },
+    "date": { "$ref": "#/$defs/month", "description": "Start or release month, e.g. 2024-06" },
+    "tech": { "$ref": "#/$defs/stringList" },
+    "tags": { "$ref": "#/$defs/stringList" },
+    "highlights": { "type": "array", "items": { "type": "string", "minLength": 1 }, "maxItems": 6 },
+    "featured": { "type": "boolean", "default": false },
+    "hidden": { "type": "boolean", "default": false, "description": "Exclude from every page and the feed" },
+    "order": { "type": "integer", "description": "Manual tie-breaker, higher first" },
+    "repo": { "type": "string", "pattern": "^[A-Za-z0-9-]+/[A-Za-z0-9._-]+$", "description": "owner/name; enables GitHub stats" },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "href", "kind"],
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "href": { "type": "string", "format": "uri-reference", "minLength": 1 },
+          "kind": { "enum": ["demo", "repo", "docs", "writeup", "video", "other"] }
+        }
+      }
+    },
+    "cover": { "type": "string", "minLength": 1, "description": "Filename in src/assets/projects/<slug>/" },
+    "gallery": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "versions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "date"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "date": { "$ref": "#/$defs/month" },
+          "note": { "type": "string" },
+          "href": { "type": "string", "format": "uri-reference" }
+        }
+      }
+    }
+  }
+}

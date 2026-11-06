@@ -1,0 +1,15 @@
+{
+  "title": "Fixture Projects",
+  "intro": "Fixture intro text.",
+  "url": "https://projects.danplace.tech",
+  "author": {
+    "name": "Fixture Author",
+    "avatar": "https://github.com/Jerit3787.png",
+    "links": [{ "label": "GitHub", "href": "https://github.com/Jerit3787" }]
+  },
+  "nav": [{ "label": "Home", "href": "/" }],
+  "categories": [
+    { "id": "tools", "label": "Web apps & tools", "description": "Things I built and use." },
+    { "id": "early", "label": "Early projects (2020–21)", "description": "Where it started." }
+  ]
+}

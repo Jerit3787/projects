@@ -1,0 +1,21 @@
+{
+  "$schema": "../../../../schema/project.schema.json",
+  "title": "Full Project",
+  "tagline": "Has every optional field except versions.",
+  "description": "Some **bold** text.\n\n<script>alert(1)</script>",
+  "status": "completed",
+  "category": "tools",
+  "date": "2026-03",
+  "tech": ["TypeScript", "Go", "Docker", "Redis", "Postgres"],
+  "tags": ["cli"],
+  "highlights": ["Fast", "Small"],
+  "featured": false,
+  "order": 0,
+  "repo": "Jerit3787/full",
+  "links": [
+    { "label": "Live demo", "href": "https://example.com", "kind": "demo" },
+    { "label": "Source", "href": "https://github.com/Jerit3787/full", "kind": "repo" }
+  ],
+  "cover": "cover.png",
+  "gallery": ["shot1.png"]
+}

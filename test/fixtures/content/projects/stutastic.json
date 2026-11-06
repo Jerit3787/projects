@@ -1,0 +1,13 @@
+{
+  "title": "Stutastic",
+  "tagline": "Parcel management for schools.",
+  "status": "completed",
+  "category": "tools",
+  "date": "2021-02",
+  "featured": true,
+  "versions": [
+    { "name": "v1", "date": "2021-02", "note": "First release" },
+    { "name": "v2", "date": "2022-01" },
+    { "name": "v3", "date": "2024-06", "href": "https://stutastic.danplace.tech" }
+  ]
+}
