@@ -22,6 +22,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter('md', (text) => md.render(text ?? ''));
   eleventyConfig.addFilter('monthYear', monthYear);
+  // Nunjucks' selectattr only tests truthiness; `where` compares against a value.
+  eleventyConfig.addFilter('where', (arr, key, value) => (arr ?? []).filter((x) => x?.[key] === value));
+  eleventyConfig.addFilter('allTech', (projects) => [...new Set((projects ?? []).flatMap((p) => p.tech ?? []))].sort((a, b) => a.localeCompare(b)));
   eleventyConfig.addFilter('head', (arr, n) => (arr ?? []).slice(0, n));
 
   return {

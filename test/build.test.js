@@ -31,3 +31,21 @@ test('home page renders cards with status lozenges', async () => {
   assert.doesNotMatch(cardBlock(html, 'minimal'), /<img/);
   assert.match(cardBlock(html, 'full'), /<img[^>]+src="\/assets\/projects\/full\/cover\.png"/);
 });
+
+test('home page has filter hooks and a featured row', async () => {
+  const html = read(await buildSite(), 'index.html');
+  assert.match(html, /id="empty-state"/);
+  assert.match(html, /data-search=/);
+  const featured = html.match(/<section[^>]*id="featured"[\s\S]*?<\/section>/);
+  assert.ok(featured, 'featured section');
+  assert.match(featured[0], /data-slug="stutastic"/);
+  assert.doesNotMatch(featured[0], /data-slug="minimal"/);
+});
+
+test('each visible project appears exactly once in the category groups', async () => {
+  const html = read(await buildSite(), 'index.html');
+  const all = html.slice(html.indexOf('id="all"'), html.indexOf('id="empty-state"'));
+  const slugs = [...all.matchAll(/data-slug="([^"]+)"/g)].map((m) => m[1]).sort();
+  assert.deepEqual(slugs, ['full', 'minimal', 'stutastic']);
+  assert.match(html, /<strong>1<\/strong><span>in progress<\/span>/);
+});
