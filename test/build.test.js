@@ -29,6 +29,8 @@ test('home page renders cards with status lozenges', async () => {
   assert.match(html, /class="lozenge lozenge--inprogress"/);
   assert.doesNotMatch(html, /undefined/);
   assert.doesNotMatch(cardBlock(html, 'minimal'), /<img/);
+  assert.match(cardBlock(html, 'minimal'), /class="card__cover card__cover--placeholder"/);
+  assert.doesNotMatch(cardBlock(html, 'full'), /card__cover--placeholder/);
   assert.match(cardBlock(html, 'full'), /<img[^>]+src="\/assets\/projects\/full\/cover\.png"/);
 });
 
