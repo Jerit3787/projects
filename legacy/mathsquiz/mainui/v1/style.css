@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'OpenSans';
+}
+
+#transitionLayerFrameStart {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s, visibility 0.2s;
+    background-color: #121212;
+}
+
+#transitionLayerFrameStart .loadingText {
+    height: auto;
+    width: auto;
+    color: white;
+    padding-left: 10px;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+section .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: #121212;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+section .container .mainPanel .topPanel {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    width: 100%;
+    height: 10%;
+    padding: 0px 0px 0px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    background-color: rgb(255, 255, 255, 0.08);
+}
+
+section .container .mainPanel .topPanel h6 {
+    padding: 0px 0px 0px 20px;
+    height: auto;
+    width: auto;
+    color: #ffffff;
+}
+
+section .container .mainPanel .topPanel span {
+    height: auto;
+    width: auto;
+    color: #ffffff;
+}
+
+section .container .bottomPanel {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 90%;
+    width: 100%;
+}
+
+
+/* The side navigation menu */
+
+section .container .blurBackground {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, visibility 0.4s;
+    background-color: rgb(0, 0, 0, 0.9);
+}
+
+section .container .leftNavigation {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    z-index: 2;
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: #121212;
+    overflow-x: hidden;
+    box-shadow: 3px 0px 5px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+    transition-timing-function: ease;
+}
+
+
+/* The navigation menu links */
+
+section .container .leftNavigation .bottomNavigation {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    background-color: rgb(255, 255, 255, 0.05);
+    height: 65%;
+    width: 100%;
+    padding-top: 10px;
+}
+
+section .container .leftNavigation .bottomNavigation div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    height: auto;
+    width: 100%;
+    padding: 10px 0 10px 22px;
+    margin: 5px 0;
+}
+
+section .container .leftNavigation .bottomNavigation .menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    height: auto;
+    width: 100%;
+    padding: 10px 0 10px 22px;
+    margin: 5px 0;
+    background-color: none;
+    transition: 0.3s;
+}
+
+section .container .leftNavigation .bottomNavigation .active,
+.menu:hover {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    height: auto;
+    width: 100%;
+    padding: 10px 0 10px 22px;
+    margin: 5px 0;
+    background-color: rgb(255, 255, 255, 0.05);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+section .container .leftNavigation .bottomNavigation .active .text,
+.menu:hover .text {
+    height: auto;
+    width: auto;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section .container .leftNavigation .bottomNavigation .menu .text {
+    height: auto;
+    width: auto;
+    color: rgb(255, 255, 255, 0.38);
+    text-decoration: none;
+}
+
+section .container .leftNavigation .bottomNavigation .active .Icon {
+    color: #ffffff;
+    margin-right: 25px;
+    height: auto;
+    width: auto;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+section .container .leftNavigation .bottomNavigation .menu .Icon {
+    color: rgb(255, 255, 255, 0.38);
+    margin-right: 25px;
+    height: auto;
+    width: auto;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+section .container .leftNavigation .topNavigation {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: left;
+    align-content: center;
+    height: 35%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+    background-image: url("img/userBackground.jpg");
+    background-blend-mode: multiply;
+}
+
+section .container .leftNavigation .topNavigation .userIcon {
+    height: auto;
+    width: auto
+}
+
+section .container .leftNavigation .topNavigation .userIcon .userIcon {
+    color: #ffffff;
+    margin: 0 0 10px 20px;
+    height: auto;
+    width: auto;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 90px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+section .container .leftNavigation .topNavigation .userText {
+    height: auto;
+    width: auto;
+}
+
+section .container .leftNavigation .topNavigation .userText h6 {
+    height: auto;
+    width: 100%;
+    color: rgb(255, 255, 255, 0.87);
+    margin: 10px 0 0 22px;
+    object-fit: cover;
+}
+
+section .container .leftNavigation .topNavigation .userText p {
+    height: auto;
+    width: 100%;
+    color: rgb(255, 255, 255, 0.6);
+    margin: 0 0 0 22px;
+    object-fit: cover;
+}
+
+section .container .mainPanel .bottomPanel {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+section .container .mainPanel .bottomPanel iframe {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+}
+
+section .container .mainPanel .bottomPanel #transitionLayerFrame {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+    background-color: #121212;
+}

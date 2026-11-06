@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style - light.css">
+    <title>MathsQuiz - Main Panel | MRSM Tun Ghafar Baba</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="fonts/font-OpenSans.css" rel="stylesheet">
+    <link href="fonts/font-Poppins.css" rel="stylesheet">
+    <link href="fonts/font-style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "25%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <section>
+        <div class=container>
+            <div id="mySidenav" class="leftNavigation">
+                <div class="topNavigation">
+                    <span class="userIcon">
+                        account_circle
+                    </span>
+                    <h6>MOHAMMAD DANISH HAKIM BIN MOHD NASIR</h6>
+                    <p class="subtitle2">414 2020</p>
+                </div>
+                <div class="bottomNavigation">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="menu1">
+                        <span class="homeIcon">
+                            home
+                            </span>
+                        <a href="#" class="home">Home</a>
+                    </div>
+                    <div class="menu2">
+                        <span class="questionsIcon">
+                            all_inbox
+                        </span>
+                        <a href="#" class="questions">Questions</a>
+                    </div>
+                    <div class="menu3">
+                        <span class="settingsIcon">
+                            settings
+                        </span>
+                        <a href="#" class="settings">Settings</a>
+                    </div>
+                    <div class="menu4">
+                        <span class="logoutIcon">
+                            login
+                        </span>
+                        <a href="#" class="logout">Logout</a>
+                    </div>
+                    <div class="menu5">
+                    </div>
+                </div>
+            </div>
+            <div class="mainPanel">
+                <div class="topPanel">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                    <h6>Home</h6>
+                </div>
+                <div class="bottomPanel">
+                    <iframe src="home - light.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+}
+
+.demo-layout-transparent {
+    background: url('assets/image/background.jfif') center / cover;
+}
+
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+ your background is light. */
+    color: white;
+}
+
+.demo-card-square.mdl-card {
+    width: 320px;
+    height: 320px;
+    margin: 5px;
+}
+
+.demo-card-square>.mdl-card__title {
+    color: #fff;
+    background: #121212;
+}
+
+.flexContainer {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.flexContainerCenter {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.demo-card-wide.mdl-card {
+    width: 100%;
+}
+
+.demo-card-wide>.mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('assets/image/main_banner.png') center / cover;
+}
+
+.demo-card-wide>.mdl-card__menu {
+    color: #fff;
+}
+
+.demo-footer {
+    padding-left: 40px;
+}
+
+.demo-footer .mdl-mini-footer--link-list a {
+    font-size: 13px;
+}

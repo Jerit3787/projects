@@ -1,0 +1,253 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>MathsQuiz - Main Panel | MRSM Tun Ghafar Baba</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="fonts/font-styles.css" rel="stylesheet">
+    <link href="fonts/font-Poppins.css" rel="stylesheet">
+    <link href="fonts/font-OpenSans.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-deep_purple.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <div id="transitionLayerFrameStart">
+            <div class="mdl-spinner ml-spinner--single-color mdl-js-spinner is-active"></div>
+            <h6 class="loadingText">Please wait</h6>
+        </div>
+        <div class=container>
+            <div id="blur" class="blurBackground" onClick="closeNav();"></div>
+            <div id="mySidenav" class="leftNavigation">
+                <div class="topNavigation">
+                    <div class="userIcon">
+                        <span class="userIcon">
+                            account_circle
+                        </span>
+                    </div>
+                    <div class="userText">
+                        <h6>RIDWAN BIN SALEH</h6>
+                        <p class="subtitle2">414 2020</p>
+                    </div>
+                </div>
+                <script>
+                    function start() {
+                        // Get the container element
+                        var btnContainer = document.getElementById("bottomNavigation");
+
+                        // Get all buttons with class="btn"inside the container
+                        var btns = btnContainer.getElementsByClassName("menu");
+
+                        // Adds function to first menu
+                        document.getElementById("main").addEventListener("click", function() {
+                            var current = document.getElementsByClassName("active");
+
+                            // If there's no active class
+                            if (current.length > 0) {
+                                current[0].className = current[0].className.replace("active", "menu");
+                            }
+
+                            // Add the active class to the current/clicked button
+                            this.className = "active";
+                        });
+
+                        // Loop through the buttons and add the active class to the current/clicked button
+                        for (var i = 0; i < btns.length; i++) {
+                            btns[i].addEventListener("click", function() {
+                                var current = document.getElementsByClassName("active");
+
+                                // If there's no active class
+                                if (current.length > 0) {
+                                    current[0].className = current[0].className.replace("active", "menu");
+                                }
+
+                                // Add the active class to the current/clicked button
+                                this.className = "active";
+                            });
+                        }
+
+                    }
+                </script>
+                <div id="bottomNavigation" class="bottomNavigation">
+                    <div id="main" class="active body1" onClick="home();">
+                        <span class="Icon">
+                            home
+                            </span>
+                        <a href="javascript:void(0)" onClick="home();" class="text">Home</a>
+                    </div>
+                    <div class="menu body1" onClick="questions();">
+                        <span class="Icon">
+                            all_inbox
+                        </span>
+                        <a href="javascript:void(0)" onClick="questions();" class="text">Questions</a>
+                    </div>
+                    <div class="menu body1" onClick="settings();">
+                        <span class="Icon">
+                            settings
+                        </span>
+                        <a href="javascript:void(0)" onClick="settings();" class="text">Settings</a>
+                    </div>
+                    <div class="menu body1" onClick="logout()">
+                        <span class="Icon">
+                            login
+                        </span>
+                        <a href="javascript:void(0)" onClick="logout();" class="text">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mainPanel">
+                <div class="topPanel">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav(); start();">&#9776;</span>
+                    <h6 id="pageTitle">Home</h6>
+                </div>
+                <div class="bottomPanel">
+                    <iframe onload="this.style.visibility='visible' ;" id="mainFrame" class="mainFrame" src="home.html" frameborder="0"></iframe>
+                    <div id="transitionLayerFrame">
+                        <div class="mdl-spinner ml-spinner--single-color mdl-js-spinner is-active"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "350px";
+            document.getElementById("blur").style.visibility = "visible";
+            document.getElementById("blur").style.opacity = "1";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("blur").style.visibility = "hidden";
+            document.getElementById("blur").style.opacity = "0";
+        }
+        window.alert("Site currently under development! Please use with care!")
+        iframeTransition();
+
+        function home() {
+            var url = 'home.html';
+            var el = document.getElementById('mainFrame');
+            var oldURL = el.src;
+            var ifr = oldURL.includes(url, 0);
+            if (ifr != true) {
+                iframeTransition();
+                el.src = url; // assign url to src property
+                closeNav();
+            } else {
+                closeNav();
+            }
+            var title = document.getElementById("pageTitle");
+            title.innerHTML = "Home";
+
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            async function iframeTransition() {
+                document.getElementById("transitionLayerFrame").style.visibility = "visible";
+                document.getElementById("transitionLayerFrame").style.opacity = "1";
+                await sleep(2000);
+                document.getElementById("transitionLayerFrame").style.visibility = "hidden";
+                document.getElementById("transitionLayerFrame").style.opacity = "0";
+            }
+        }
+
+        function questions() {
+            var url = 'questions.html';
+            var el = document.getElementById('mainFrame');
+            var oldURL = el.src;
+            var ifr = oldURL.includes(url, 0);
+            if (ifr != true) {
+                iframeTransition();
+                el.src = url; // assign url to src property
+                closeNav();
+            } else {
+                closeNav();
+            }
+            var title = document.getElementById("pageTitle");
+            title.innerHTML = "Questions";
+
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            async function iframeTransition() {
+                document.getElementById("transitionLayerFrame").style.visibility = "visible";
+                document.getElementById("transitionLayerFrame").style.opacity = "1";
+                await sleep(2000);
+                document.getElementById("transitionLayerFrame").style.visibility = "hidden";
+                document.getElementById("transitionLayerFrame").style.opacity = "0";
+            }
+        }
+
+        function settings() {
+            var url = 'settings.html';
+            var el = document.getElementById('mainFrame');
+            var oldURL = el.src;
+            var ifr = oldURL.includes(url, 0);
+            if (ifr != true) {
+                iframeTransition();
+                el.src = url; // assign url to src property
+                closeNav();
+            } else {
+                closeNav();
+            }
+            var title = document.getElementById("pageTitle");
+            title.innerHTML = "Settings";
+
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            async function iframeTransition() {
+                document.getElementById("transitionLayerFrame").style.visibility = "visible";
+                document.getElementById("transitionLayerFrame").style.opacity = "1";
+                await sleep(2000);
+                document.getElementById("transitionLayerFrame").style.visibility = "hidden";
+                document.getElementById("transitionLayerFrame").style.opacity = "0";
+            }
+        }
+
+        function logout() {
+            var url = 'logout.html';
+            var el = document.getElementById('mainFrame');
+            var oldURL = el.src;
+            var ifr = oldURL.includes(url, 0);
+            if (ifr != true) {
+                iframeTransition();
+                el.src = url; // assign url to src property
+                closeNav();
+            } else {
+                closeNav();
+            }
+            var title = document.getElementById("pageTitle");
+            title.innerHTML = "Logout";
+
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            async function iframeTransition() {
+                document.getElementById("transitionLayerFrame").style.visibility = "visible";
+                document.getElementById("transitionLayerFrame").style.opacity = "1";
+                await sleep(2000);
+                document.getElementById("transitionLayerFrame").style.visibility = "hidden";
+                document.getElementById("transitionLayerFrame").style.opacity = "0";
+            }
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function iframeTransition() {
+            await sleep(4000);
+            document.getElementById("transitionLayerFrameStart").style.visibility = "hidden";
+            document.getElementById("transitionLayerFrameStart").style.opacity = "0";
+        }
+    </script>
+</body>
+
+</html>

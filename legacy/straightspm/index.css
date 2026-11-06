@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(18, 18, 18, 0.42);
+    text-align: center;
+}
+
+p {
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(18, 18, 18, 0.42);
+    text-align: center;
+}
+
+.titleText {
+    margin-bottom: 0;
+}
+
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( 180deg, #2f6ed3 5%, #5095e4 20%, #5095e4 60%, #2f6ed3 95%);
+}
+
+.mainBox {
+    height: 60%;
+    width: 60%;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.flexForms {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.textBox {
+    width: 200%;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(18, 18, 18, 0.42);
+    transition: transform 300ms ease-in-out;
+    transition: 600ms ease-in-out;
+    font-size: large;
+    text-align: center;
+}
+
+.textBox:hover {
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+}
+
+.submitButton {
+    margin-top: 10px;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(18, 18, 18, 0.42);
+    transition: transform 300ms ease-in-out;
+    transition: 600ms ease-in-out;
+    font-size: large;
+}
+
+.submitButton:hover {
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+}
+
+.creditContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.creditText {
+    margin-right: 5px;
+}
+
+.creditLinks {
+    font-family: 'Fredoka One', cursive;
+    color: white;
+}

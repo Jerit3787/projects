@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="home - light.css">
+    <title>MathsQuiz - Main Panel | MRSM Tun Ghafar Baba</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="fonts/font-OpenSans.css" rel="stylesheet">
+    <link href="fonts/font-Poppins.css" rel="stylesheet">
+    <link href="fonts/font-style.css" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
+        import {
+            MDCRipple
+        }
+        from '@material/ripple';
+
+        const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+    </script>
+</head>
+
+<body>
+    <section>
+        <div class="HomeUI ">
+            <div class="welcomeCard ">
+                <p class="overline ">WELCOME BACK, DANISH!</p>
+                <h5>Continue what you have left out</h5>
+            </div>
+            <div class="mainCard ">
+                <p class="subtask ">Current Assignment</p>
+                <h5>You have 3 unfinished task</h5>
+                <div class="stackCards ">
+                    <div class="stackCard1 ">
+                        <img src="img/Question1.jpg ">
+                        <div class="captionText ">
+                            <p class="subtext1 ">Additional Mathematics Form 4</p>
+                            <h5>Solutions of Triangles</h5>
+                            <p class="subtext2">ASSIGNED BY : PN. ARNI</p>
+                            <p class="subtext2">70% done</p>
+                            <button class="mdc-button">
+                                <div class="mdc-button__ripple"></div>
+                                <span class="mdc-button__label">CONTINUE</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="stackCard2">
+                        <img src="img/Question2.jpg ">
+                        <div class="captionText ">
+                            <p class="subtext1 ">Mathematics Form 4</p>
+                            <h5>Consumer Mathematics: Financial Management</h5>
+                            <p class="subtext2">ASSIGNED BY : PN. ARNI</p>
+                            <p class="subtext2 ">25% done</p>
+                            <button class="mdc-button">
+                                <div class="mdc-button__ripple"></div>
+                                <span class="mdc-button__label">CONTINUE</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="stackCard3">
+                        <img src="img/Question3.jpg ">
+                        <div class="captionText ">
+                            <p class="subtext1 ">Mathematics Form 4</p>
+                            <h5>Probability of Combined Events</h5>
+                            <p class="subtext2">ASSIGNED BY : PN. JUNAIDA</p>
+                            <p class="subtext2 ">50% done</p>
+                            <button class="mdc-button">
+                                <div class="mdc-button__ripple"></div>
+                                <span class="mdc-button__label">CONTINUE</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
