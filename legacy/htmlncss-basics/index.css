@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'dm_sansregular';
-    src: url('https://danishsite.theworkpc.com/htmlprojects/font/dmsans-regular-webfont.woff2') format('woff2'),
-         url('https://danishsite.theworkpc.com/htmlprojects/font/dmsans-regular-webfont.woff') format('woff');
+    src: url('../font/dmsans-regular-webfont.woff2') format('woff2'),
+         url('../font/dmsans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -16,8 +16,8 @@
 
 @font-face {
     font-family: 'dm_sansbold';
-    src: url('https://danishsite.theworkpc.com/htmlprojects/font/dmsans-bold-webfont.woff2') format('woff2'),
-         url('https://danishsite.theworkpc.com/htmlprojects/font/dmsans-bold-webfont.woff') format('woff');
+    src: url('../font/dmsans-bold-webfont.woff2') format('woff2'),
+         url('../font/dmsans-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
