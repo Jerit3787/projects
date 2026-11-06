@@ -23,9 +23,20 @@
   ],
   "links": [
     {
+      "label": "Interactive slides",
+      "href": "https://slides.danplace.tech/intro-to-pwn/",
+      "kind": "demo"
+    },
+    {
+      "label": "Writeup",
+      "href": "https://ctf.danplace.tech/posts/htb-meetup-iium/",
+      "kind": "writeup"
+    },
+    {
       "label": "Source",
       "href": "https://github.com/Jerit3787/htb-meetup-pwn",
       "kind": "repo"
     }
-  ]
+  ],
+  "cover": "cover.jpg"
 }

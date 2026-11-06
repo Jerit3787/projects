@@ -14,3 +14,10 @@ test('real content uses one spelling per technology', () => {
   const clashes = [...byKey.values()].filter((s) => s.size > 1).map((s) => [...s].join(' vs '));
   assert.deepEqual(clashes, []);
 });
+
+test('every cover and gallery image referenced by real content exists', async () => {
+  const { existsSync } = await import('node:fs');
+  const missing = projects.flatMap((p) => [p.cover, ...(p.gallery ?? [])].filter(Boolean)
+    .map((f) => `src/assets/projects/${p.slug}/${f}`)).filter((f) => !existsSync(f));
+  assert.deepEqual(missing, []);
+});

@@ -11,9 +11,15 @@
   ],
   "links": [
     {
+      "label": "Live demo",
+      "href": "https://book.danplace.tech/booking/select-venue/",
+      "kind": "demo"
+    },
+    {
       "label": "Source",
       "href": "https://github.com/Jerit3787/IIUMVenueBookingSystem",
       "kind": "repo"
     }
-  ]
+  ],
+  "cover": "cover.jpg"
 }

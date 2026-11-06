@@ -24,5 +24,7 @@
       "href": "https://github.com/Jerit3787/Driver-State-Detection",
       "kind": "repo"
     }
-  ]
+  ],
+  "cover": "cover.jpg",
+  "description": "Forked from [e-candeloro/Driver-State-Detection](https://github.com/e-candeloro/Driver-State-Detection) and heavily modified to run a custom ResNet50 facial keypoint model, trained following a [debuggercafe.com tutorial](https://debuggercafe.com/robust-facial-keypoint-detection-model/). The cover shows that model's own training metrics."
 }
