@@ -1,0 +1,22 @@
+{
+  "name": "projects-showcase",
+  "private": true,
+  "version": "1.0.0",
+  "description": "JSON-driven project showcase for projects.danplace.tech",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "test": "node --test test/*.test.js",
+    "new": "node scripts/new-project.js"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "markdown-it": "^15.0.3"
+  }
+}
