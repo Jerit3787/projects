@@ -1,0 +1,11 @@
+{%- macro lozenge(status) -%}
+{%- set map = {
+  active: ['inprogress', 'In progress'],
+  completed: ['success', 'Completed'],
+  paused: ['moved', 'Paused'],
+  archived: ['default', 'Archived'],
+  cancelled: ['removed', 'Cancelled']
+} -%}
+{%- set m = map[status] or ['default', status] -%}
+<span class="lozenge lozenge--{{ m[0] }}">{{ m[1] }}</span>
+{%- endmacro -%}

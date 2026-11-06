@@ -16,3 +16,18 @@ test('legacy demos are served at their old paths', async () => {
   assert.equal(read(out, 'CNAME').trim(), 'projects.danplace.tech');
   assert.ok(!existsSync(join(out, 'legacy')));
 });
+
+const cardBlock = (html, slug) => {
+  const m = html.match(new RegExp(`<article[^>]*data-slug="${slug}"[\\s\\S]*?</article>`));
+  assert.ok(m, `card ${slug} rendered`);
+  return m[0];
+};
+
+test('home page renders cards with status lozenges', async () => {
+  const html = read(await buildSite(), 'index.html');
+  assert.match(html, /class="lozenge lozenge--success"/);
+  assert.match(html, /class="lozenge lozenge--inprogress"/);
+  assert.doesNotMatch(html, /undefined/);
+  assert.doesNotMatch(cardBlock(html, 'minimal'), /<img/);
+  assert.match(cardBlock(html, 'full'), /<img[^>]+src="\/assets\/projects\/full\/cover\.png"/);
+});

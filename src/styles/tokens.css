@@ -1,0 +1,94 @@
+/* Design tokens — Atlassian Design System inspired (8px grid, neutral palette, blue brand). */
+:root {
+  color-scheme: light;
+  --color-text: #172B4D;
+  --color-text-subtle: #44546F;
+  --color-text-subtlest: #626F86;
+  --color-bg: #FFFFFF;
+  --color-bg-sunken: #F7F8F9;
+  --color-bg-neutral: #091E420F;
+  --color-bg-neutral-hover: #091E4224;
+  --color-surface-raised: #FFFFFF;
+  --color-border: #091E4224;
+  --color-border-focus: #388BFF;
+  --color-brand: #0C66E4;
+  --color-brand-hover: #0055CC;
+  --color-text-inverse: #FFFFFF;
+  --color-link: #0C66E4;
+
+  --lozenge-success-bg: #DCFFF1;    --lozenge-success-text: #216E4E;
+  --lozenge-inprogress-bg: #E9F2FF; --lozenge-inprogress-text: #0055CC;
+  --lozenge-moved-bg: #FFF7D6;      --lozenge-moved-text: #A54800;
+  --lozenge-removed-bg: #FFECEB;    --lozenge-removed-text: #AE2E24;
+  --lozenge-default-bg: #F1F2F4;    --lozenge-default-text: #44546F;
+
+  --space-050: 4px; --space-100: 8px; --space-150: 12px; --space-200: 16px;
+  --space-300: 24px; --space-400: 32px; --space-500: 40px; --space-800: 64px;
+
+  --radius-small: 3px;
+  --radius-large: 8px;
+  --radius-round: 999px;
+
+  --shadow-raised: 0 1px 1px #091E4240, 0 0 1px #091E424F;
+  --shadow-overlay: 0 8px 12px #091E4226, 0 0 1px #091E424F;
+
+  --font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-body: 400 14px/20px var(--font-family);
+  --font-heading-xl: 653 29px/32px var(--font-family);
+  --font-heading-l: 653 24px/28px var(--font-family);
+  --font-heading-m: 653 20px/24px var(--font-family);
+  --font-heading-s: 653 16px/20px var(--font-family);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-text: #B6C2CF;
+    --color-text-subtle: #9FADBC;
+    --color-text-subtlest: #8C9BAB;
+    --color-bg: #1D2125;
+    --color-bg-sunken: #161A1D;
+    --color-bg-neutral: #A1BDD914;
+    --color-bg-neutral-hover: #A6C5E229;
+    --color-surface-raised: #22272B;
+    --color-border: #A6C5E229;
+    --color-border-focus: #85B8FF;
+    --color-brand: #579DFF;
+    --color-brand-hover: #85B8FF;
+    --color-text-inverse: #1D2125;
+    --color-link: #579DFF;
+    --lozenge-success-bg: #164B35;    --lozenge-success-text: #7EE2B8;
+    --lozenge-inprogress-bg: #09326C; --lozenge-inprogress-text: #85B8FF;
+    --lozenge-moved-bg: #533F04;      --lozenge-moved-text: #F8E6A0;
+    --lozenge-removed-bg: #5D1F1A;    --lozenge-removed-text: #FD9891;
+    --lozenge-default-bg: #2C333A;    --lozenge-default-text: #9FADBC;
+    --shadow-raised: 0 0 0 1px #00000000, 0 1px 1px #03040480, 0 0 1px #03040480;
+    --shadow-overlay: 0 0 0 1px #BCD6F00A, 0 8px 12px #0304045C, 0 0 1px #03040480;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-text: #B6C2CF;
+  --color-text-subtle: #9FADBC;
+  --color-text-subtlest: #8C9BAB;
+  --color-bg: #1D2125;
+  --color-bg-sunken: #161A1D;
+  --color-bg-neutral: #A1BDD914;
+  --color-bg-neutral-hover: #A6C5E229;
+  --color-surface-raised: #22272B;
+  --color-border: #A6C5E229;
+  --color-border-focus: #85B8FF;
+  --color-brand: #579DFF;
+  --color-brand-hover: #85B8FF;
+  --color-text-inverse: #1D2125;
+  --color-link: #579DFF;
+  --lozenge-success-bg: #164B35;    --lozenge-success-text: #7EE2B8;
+  --lozenge-inprogress-bg: #09326C; --lozenge-inprogress-text: #85B8FF;
+  --lozenge-moved-bg: #533F04;      --lozenge-moved-text: #F8E6A0;
+  --lozenge-removed-bg: #5D1F1A;    --lozenge-removed-text: #FD9891;
+  --lozenge-default-bg: #2C333A;    --lozenge-default-text: #9FADBC;
+  --shadow-raised: 0 0 0 1px #00000000, 0 1px 1px #03040480, 0 0 1px #03040480;
+  --shadow-overlay: 0 0 0 1px #BCD6F00A, 0 8px 12px #0304045C, 0 0 1px #03040480;
+}

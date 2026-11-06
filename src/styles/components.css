@@ -1,0 +1,74 @@
+/* Lozenge */
+.lozenge {
+  display: inline-flex; align-items: center;
+  padding: 0 var(--space-050); border-radius: var(--radius-small);
+  font: 700 11px/16px var(--font-family); text-transform: uppercase; letter-spacing: 0.02em;
+  white-space: nowrap; vertical-align: middle;
+  background: var(--lozenge-default-bg); color: var(--lozenge-default-text);
+}
+.lozenge--success { background: var(--lozenge-success-bg); color: var(--lozenge-success-text); }
+.lozenge--inprogress { background: var(--lozenge-inprogress-bg); color: var(--lozenge-inprogress-text); }
+.lozenge--moved { background: var(--lozenge-moved-bg); color: var(--lozenge-moved-text); }
+.lozenge--removed { background: var(--lozenge-removed-bg); color: var(--lozenge-removed-text); }
+
+/* Tag */
+.tag {
+  display: inline-flex; align-items: center; height: 20px;
+  padding: 0 var(--space-100); border-radius: var(--radius-small);
+  background: var(--color-bg-neutral); color: var(--color-text);
+  font-size: 12px; line-height: 20px; white-space: nowrap;
+}
+.tags { display: flex; flex-wrap: wrap; gap: var(--space-050); list-style: none; padding: 0; margin: 0; }
+
+/* Button */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--space-050);
+  height: 32px; padding: 0 var(--space-150); border-radius: var(--radius-small);
+  font: 500 14px/32px var(--font-family); white-space: nowrap; cursor: pointer;
+  border: 0; background: var(--color-bg-neutral); color: var(--color-text);
+  transition: background 0.1s;
+}
+.btn:hover { background: var(--color-bg-neutral-hover); text-decoration: none; }
+.btn--primary { background: var(--color-brand); color: var(--color-text-inverse); }
+.btn--primary:hover { background: var(--color-brand-hover); }
+.btn--subtle { background: transparent; }
+.btn--subtle:hover { background: var(--color-bg-neutral); }
+.btn--icon { width: 32px; padding: 0; justify-content: center; }
+.btn-group { display: flex; flex-wrap: wrap; gap: var(--space-100); }
+
+/* Card */
+.card {
+  position: relative; display: flex; flex-direction: column;
+  background: var(--color-surface-raised); border-radius: var(--radius-large);
+  box-shadow: var(--shadow-raised); overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+.card:hover, .card:focus-within { box-shadow: var(--shadow-overlay); }
+.card__cover { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; background: var(--color-bg-sunken); border-bottom: 1px solid var(--color-border); }
+.card__body { display: flex; flex-direction: column; gap: var(--space-100); padding: var(--space-200); flex: 1; }
+.card__head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-100); }
+.card__title { font: var(--font-heading-s); }
+.card__title a { color: var(--color-text); }
+.card__title a::after { content: ""; position: absolute; inset: 0; } /* whole card clickable */
+.card__tagline { color: var(--color-text-subtle); margin: 0; }
+.card__meta { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: var(--space-100); padding-top: var(--space-100); }
+.card__date { color: var(--color-text-subtlest); font-size: 12px; white-space: nowrap; }
+.card--featured .card__title { font: var(--font-heading-m); }
+
+.grid { display: grid; gap: var(--space-200); grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
+.grid--featured { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+
+/* Section headings */
+.section { margin-top: var(--space-500); }
+.section__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-100) var(--space-200); margin-bottom: var(--space-200); }
+.section__head p { margin: 0; color: var(--color-text-subtle); }
+.eyebrow { font: 653 12px/16px var(--font-family); text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-subtlest); margin-bottom: var(--space-100); }
+
+/* Theme toggle icons */
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: inline; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: inline; }
+}

@@ -1,4 +1,10 @@
 ---
+layout: layouts/base.njk
 permalink: /index.html
 ---
-<!doctype html><title>Projects</title>
+{%- from "components/card.njk" import card -%}
+<div class="grid">
+{%- for p in projects %}
+  {{ card(p) }}
+{%- endfor %}
+</div>

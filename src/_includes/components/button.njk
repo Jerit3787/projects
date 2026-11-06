@@ -1,0 +1,3 @@
+{%- macro button(label, href, appearance='default', external=false) -%}
+<a class="btn btn--{{ appearance }}" href="{{ href }}"{% if external %} target="_blank" rel="noopener"{% endif %}>{{ label }}{% if external %}<span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in new tab)</span>{% endif %}</a>
+{%- endmacro -%}

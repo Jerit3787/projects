@@ -1,0 +1,31 @@
+{%- from "components/lozenge.njk" import lozenge -%}
+{%- from "components/tag.njk" import tag -%}
+{%- macro card(project, featured=false) -%}
+{%- set tech = project.tech or [] -%}
+<article class="card{% if featured %} card--featured{% endif %}"
+  data-slug="{{ project.slug }}"
+  data-category="{{ project.category }}"
+  data-status="{{ project.status }}"
+  data-tech="{{ tech | join('|') }}"
+  data-search="{{ [project.title, project.tagline, tech | join(' '), (project.tags or []) | join(' ')] | join(' ') | lower }}">
+  {%- if project.cover %}
+  <img class="card__cover" src="/assets/projects/{{ project.slug }}/{{ project.cover }}" alt="" loading="lazy" decoding="async">
+  {%- endif %}
+  <div class="card__body">
+    <div class="card__head">
+      <h3 class="card__title"><a href="/projects/{{ project.slug }}/">{{ project.title }}</a></h3>
+      {{ lozenge(project.status) }}
+    </div>
+    <p class="card__tagline">{{ project.tagline }}</p>
+    <div class="card__meta">
+      {%- if tech.length %}
+      <ul class="tags" aria-label="Tech">
+        {%- for t in tech | head(4) %}<li>{{ tag(t) }}</li>{% endfor -%}
+        {%- if tech.length > 4 %}<li><span class="tag">+{{ tech.length - 4 }}</span></li>{% endif -%}
+      </ul>
+      {%- else %}<span></span>{% endif %}
+      <time class="card__date" datetime="{{ project.date }}">{{ project.date | monthYear }}</time>
+    </div>
+  </div>
+</article>
+{%- endmacro -%}
