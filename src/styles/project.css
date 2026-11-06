@@ -9,7 +9,22 @@
 @media (max-width: 860px) { .project-layout { grid-template-columns: 1fr; } .project-aside { order: -1; } }
 
 .project-main { display: flex; flex-direction: column; gap: var(--space-400); }
-.project-cover { width: 100%; border-radius: var(--radius-large); box-shadow: var(--shadow-raised); }
+.carousel { display: grid; gap: var(--space-150); }
+.carousel__track {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none;
+  border-radius: var(--radius-large); box-shadow: var(--shadow-raised); background: var(--color-bg-sunken);
+}
+.carousel__track::-webkit-scrollbar { display: none; }
+.carousel__track:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+.carousel__slide { flex: 0 0 100%; margin: 0; scroll-snap-align: center; }
+.carousel__slide img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; }
+.carousel__controls { display: flex; align-items: center; justify-content: center; gap: var(--space-150); }
+.carousel__controls[hidden] { display: none; }
+.carousel__controls .btn--icon { font-size: 20px; }
+.carousel__dots { display: flex; gap: var(--space-100); }
+.carousel__dot { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: var(--color-border); cursor: pointer; }
+.carousel__dot[aria-current="true"] { background: var(--color-brand); }
+@media (prefers-reduced-motion: reduce) { .carousel__track { scroll-behavior: auto; } }
 .project-section h2 { font: var(--font-heading-m); margin-bottom: var(--space-150); }
 
 .highlights { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-100); }
@@ -27,8 +42,6 @@
 .timeline__head { display: flex; gap: var(--space-100); align-items: baseline; flex-wrap: wrap; }
 .timeline__item p { margin: var(--space-050) 0 0; }
 
-.gallery { display: grid; gap: var(--space-150); grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
-.gallery img { border-radius: var(--radius-small); box-shadow: var(--shadow-raised); aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
 
 .project-aside { position: sticky; top: 80px; background: var(--color-bg-sunken); border: 1px solid var(--color-border); border-radius: var(--radius-large); padding: var(--space-200); }
 @media (max-width: 860px) { .project-aside { position: static; } }

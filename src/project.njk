@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 pageStyles: project.css
+pageScript: carousel.js
 pagination:
   data: projects
   size: 1
@@ -35,8 +36,26 @@ eleventyComputed:
 
 <div class="project-layout">
   <article class="project-main">
-    {%- if project.cover %}
-    <img class="project-cover" src="{{ assets }}{{ project.cover }}" alt="Screenshot of {{ project.title }}">
+    {%- set slides = ([project.cover] if project.cover else []).concat(project.gallery or []) -%}
+    {%- if slides.length %}
+    <section class="carousel" aria-roledescription="carousel" aria-label="Screenshots of {{ project.title }}">
+      <div class="carousel__track" tabindex="0">
+        {%- for s in slides %}
+        <figure class="carousel__slide" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ slides.length }}">
+          <img src="{{ assets }}{{ s }}" alt="Screenshot {{ loop.index }} of {{ project.title }}"{% if not loop.first %} loading="lazy"{% endif %}>
+        </figure>
+        {%- endfor %}
+      </div>
+      {%- if slides.length > 1 %}
+      <div class="carousel__controls" hidden>
+        <button class="btn btn--icon carousel__prev" type="button" aria-label="Previous screenshot">‹</button>
+        <div class="carousel__dots">
+          {%- for s in slides %}<button type="button" class="carousel__dot" aria-label="Show screenshot {{ loop.index }}"></button>{% endfor -%}
+        </div>
+        <button class="btn btn--icon carousel__next" type="button" aria-label="Next screenshot">›</button>
+      </div>
+      {%- endif %}
+    </section>
     {%- endif %}
 
     {%- if project.highlights and project.highlights.length %}
@@ -69,15 +88,6 @@ eleventyComputed:
         </li>
         {%- endfor %}
       </ol>
-    </section>
-    {%- endif %}
-
-    {%- if project.gallery and project.gallery.length %}
-    <section class="project-section">
-      <h2>Gallery</h2>
-      <div class="gallery">
-        {%- for g in project.gallery %}<a href="{{ assets }}{{ g }}"><img src="{{ assets }}{{ g }}" alt="{{ project.title }} screenshot {{ loop.index }}" loading="lazy"></a>{% endfor %}
-      </div>
     </section>
     {%- endif %}
   </article>

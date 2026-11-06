@@ -64,6 +64,16 @@ test('minimal detail page has no empty sections', async () => {
   assert.doesNotMatch(html, /Highlights|Versions|<img|undefined/);
 });
 
+test('cover and gallery images share one carousel', async () => {
+  const html = read(await buildSite(), 'projects/full/index.html');
+  const m = html.match(/<section class="carousel"[\s\S]*?<\/section>/);
+  assert.ok(m, 'carousel rendered');
+  const srcs = [...m[0].matchAll(/<img[^>]+src="([^"]+)"/g)].map((x) => x[1]);
+  assert.deepEqual(srcs, ['/assets/projects/full/cover.png', '/assets/projects/full/shot1.png']);
+  assert.doesNotMatch(html, />Gallery</);
+  assert.match(html, /src="\/scripts\/carousel\.js"/);
+});
+
 test('description markdown is rendered and raw HTML escaped', async () => {
   const html = read(await buildSite(), 'projects/full/index.html');
   assert.match(html, /<strong>bold<\/strong>/);
